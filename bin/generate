@@ -3,8 +3,8 @@
 # Exit on any error.
 set -e
 
-ROOT="$HOME/jsdoc"
-REPO="$ROOT/git/integration"
+ROOT="$HOME/vh-apidocsmoodleorg-js"
+REPO="$ROOT/integration"
 OUTPUT="/var/www/vhosts/apidocs.moodle.org/html/js"
 BRANCHES="master MOODLE_26_STABLE"
 YUIDOC="$ROOT/node_modules/.bin/yuidoc"
