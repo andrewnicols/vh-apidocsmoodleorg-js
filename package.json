@@ -1,6 +1,6 @@
 {
-  "name": "moodle-jsdoc",
-  "version": "0.0.0",
+  "name": "vh-apidicsmoodleorg-js",
+  "version": "0.0.1",
   "description": "Moodle JS Documentation Generator",
   "main": "index.js",
   "scripts": {
