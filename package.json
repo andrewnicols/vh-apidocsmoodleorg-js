@@ -1,5 +1,5 @@
 {
-  "name": "vh-apidicsmoodleorg-js",
+  "name": "vh-apidocsmoodleorg-js",
   "version": "0.0.3",
   "description": "Moodle JS Documentation Generator",
   "main": "index.js",
@@ -7,5 +7,19 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Andrew Nicols",
-  "license": "GPLv3"
+  "license": "GPLv3",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/andrewnicols/vh-apidocsmoodleorg-js.git"
+  },
+  "keywords": [
+    "api",
+    "doc",
+    "yui",
+    "moodle"
+  ],
+  "bugs": {
+    "url": "https://github.com/andrewnicols/vh-apidocsmoodleorg-js/issues"
+  },
+  "homepage": "https://github.com/andrewnicols/vh-apidocsmoodleorg-js"
 }
