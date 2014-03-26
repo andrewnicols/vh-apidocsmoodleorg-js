@@ -1,0 +1,11 @@
+{
+  "name": "moodle-jsdoc",
+  "version": "0.0.0",
+  "description": "Moodle JS Documentation Generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrew Nicols",
+  "license": "GPLv3"
+}

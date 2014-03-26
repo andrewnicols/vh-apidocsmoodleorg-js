@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+# Exit on any error.
+set -e
+
+ROOT="$HOME/jsdoc"
+REPO="$ROOT/git/integration"
+OUTPUT="/var/www/vhosts/apidocs.moodle.org/html/js"
+BRANCHES="master MOODLE_26_STABLE"
+YUIDOC="$ROOT/node_modules/.bin/yuidoc"
+LOG="$ROOT/output.log"
+
+getLatestMoodle () {
+  branch="$1"
+
+  git fetch origin >> "$LOG"
+  git checkout --detach --force origin/"$branch" >> "$LOG" 2>&1
+}
+
+getRelease() {
+  cat version.php  | grep '$release' | sed "s/.*'\([^']*\)'.*$/\1/"
+}
+
+getLatestDocs() {
+  version="$branch"
+
+  getLatestMoodle "$branch"
+  release=$(getRelease)
+
+  mkdir -p "$OUTPUT"/"$version"
+  $YUIDOC --project-version "$release" --outdir "$OUTPUT"/"$version"/ >> "$OUTPUT"/"$version".log 2>&1
+}
+
+cd $REPO
+for branch in $BRANCHES
+do
+  getLatestDocs "$branch"
+done
