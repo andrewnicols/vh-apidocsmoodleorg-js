@@ -28,7 +28,7 @@ getLatestDocs() {
   release=$(getRelease)
 
   mkdir -p "$OUTPUT"/"$version"
-  $YUIDOC --theme "$ROOT/theme/moodle" --project-version "$release" --no-color --outdir "$OUTPUT"/"$version"/ >> "$OUTPUT"/"$version".log 2>&1
+  $YUIDOC --themedir "$ROOT/theme/moodle" --project-version "$release" --no-color --outdir "$OUTPUT"/"$version"/ >> "$OUTPUT"/"$version".log 2>&1
 }
 
 cd $REPO
