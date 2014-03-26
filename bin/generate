@@ -4,7 +4,7 @@
 set -e
 
 ROOT="$HOME/vh-apidocsmoodleorg-js"
-REPO="$ROOT/integration"
+REPO="$ROOT/git/integration"
 OUTPUT="/var/www/vhosts/apidocs.moodle.org/html/js"
 BRANCHES="master MOODLE_26_STABLE"
 YUIDOC="$ROOT/node_modules/.bin/yuidoc"
